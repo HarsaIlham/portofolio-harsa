@@ -9,10 +9,6 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-    "scripts": {
-    "build": "react-scripts build",
-    "install": "npm install --legacy-peer-deps"
-  },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -67,4 +63,5 @@
     "vite": "^5.4.10"
   }
 }
+
 
