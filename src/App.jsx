@@ -67,25 +67,17 @@ const ProjectPageLayout = () => (
 );
 
 function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={
-          <>
-            <Navbar />
-            <AnimatedBackground />
-            <Home />
-            <About />
-            <Portofolio />
-            <ContactPage />
-          </>
-        } />
+        <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
         <Route path="/project/:id" element={<ProjectPageLayout />} />
-        <Route path="*" element={<NotFoundPage />} />
+         <Route path="*" element={<NotFoundPage />} /> {/* Ini route 404 */}
       </Routes>
     </BrowserRouter>
   );
 }
-
 
 export default App;
